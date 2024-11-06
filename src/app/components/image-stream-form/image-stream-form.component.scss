@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.form {
+  display: block;
+  width: 600px;
+}
+
+.img {
+  display: flex;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    background-color: gainsboro;
+    border-radius: 20px;
+    margin-top: 20px;
+    position: relative;
+  }
+}
+
+.loading {
+  position: absolute;
+}

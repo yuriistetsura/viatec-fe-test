@@ -1,0 +1,32 @@
+<div class="container">
+  <form  class="form" (ngSubmit)="onSubmit()">
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <mat-label>Your number</mat-label>
+        <input
+          matInput
+          placeholder="Enter number"
+          name="example"
+          [(ngModel)]="testNumber"
+        />
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button>Submit</button>
+
+    <div class="img-container">
+      @if (isLoading) {
+        <span class="loading">Loading...</span>
+      }
+      @if (imageData) {
+        <div class="img">
+          <img
+            [src]="imageData"
+            alt="Streamed Image"
+            [style.width.px]="imageWidth" />
+        </div>
+      }
+    </div>
+    <p>Width: {{ imageWidth }}px, Height: {{ imageHeight }}px</p>
+  </form>
+</div>
